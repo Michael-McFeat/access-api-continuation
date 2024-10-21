@@ -1,6 +1,7 @@
 import React, {useEffect, useLayoutEffect, useState} from "react";
 import "./Payments.css";
 import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
 
 
 // function scriptAlreadyLoaded(src) {
@@ -72,6 +73,9 @@ import axios from "axios";
 
 
 export function Payments() {
+
+  const value = useSelector((state) => state.cart.total);
+
   const [formData, setFormData] = useState({
     fullName: "",
     address: "",
@@ -107,10 +111,10 @@ export function Payments() {
           "paymentInstrument": {
         "type": "plain",
             "cardHolderName": "Sherlock Holmes",
-            "cardNumber": "4000000000001091",
+            "cardNumber": formData.cardNumber,
             "expiryDate": {
-          "month": 5,
-              "year": 2035
+          "month": parseInt(formData.expMonth),
+              "year": parseInt(formData.expYear)
         },
         "billingAddress": {
           "address1": "221B Baker Street",
@@ -128,11 +132,13 @@ export function Payments() {
       },
       "value": {
         "currency": "GBP",
-            "amount": 42
+            "amount": parseFloat(value)
       }
     }
 
     }
+
+    console.log(testData);
 
     axios.post('https://try.access.worldpay.com/api/payments', testData, {
       auth: {
