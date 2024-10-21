@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LoginPage from '../assets/login-page.jpg';
 import './Home.css';
+import { Payments } from '../components/Payments';
 
 function Home() {
     return (
@@ -24,6 +25,9 @@ function Home() {
                 </div>
             </div>
         </div>
+        // <div>
+        //     <Payments/>
+        // </div>
     );
 }
 
