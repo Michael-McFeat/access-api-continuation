@@ -64,7 +64,7 @@ function addWorldpayCheckoutToPage() {
 }
 
 function PaymentForm() {
-    const checkoutScriptUrl = "https://preprod.access.worldpay.com/access-checkout/v2/checkout.js";
+    const checkoutScriptUrl = "https://try.access.worldpay.com/access-checkout/v2/checkout.js";
     let checkout;
 
     function generateSession () {
