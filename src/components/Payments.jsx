@@ -4,6 +4,8 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { v4 as uuidv4} from 'uuid';
 
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiPass = import.meta.env.VITE_API_PASSCODE;
 
 // function scriptAlreadyLoaded(src) {
 //     return document.querySelector(`script[src="${src}"]`);
@@ -76,7 +78,7 @@ import { v4 as uuidv4} from 'uuid';
 export function Payments() {
 
   const value = useSelector((state) => state.cart.total);
-  const credentials = btoa("WULlOqbjOuxGKpC4" + ":" + "Gxxm9GQZKm5WeboUmUmUaHblIHNH71b4UKrT9z0AMIkp2MEZgVnFAkcEvAWNB0si");
+  const credentials = btoa(`${apiKey}:${apiPass}`);
   const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
   const targetUrl = 'https://try.access.worldpay.com/api/payments';
 
