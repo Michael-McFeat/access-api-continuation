@@ -19,7 +19,7 @@ function App() {
                         <Route path="/products" element={<Products />} />
                         <Route path="/checkout" element={<CheckoutPage />} />
                     </Routes>
-                    <Footer />
+                    {/* <Footer /> */}
                 </div>
             </Router>
         </Provider>

@@ -1,7 +1,7 @@
 {
   "name": "access-apis",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
+    "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
