@@ -1,5 +1,5 @@
-import React, {useEffect, useLayoutEffect, useState} from "react";
 import "./Payments.css";
+import React, {useEffect, useLayoutEffect, useState} from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { v4 as uuidv4} from 'uuid';
