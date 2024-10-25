@@ -1,79 +1,11 @@
 import "./Payments.css";
-import React, {useEffect, useLayoutEffect, useState} from "react";
+import { useState } from "react";
 import axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { v4 as uuidv4} from 'uuid';
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const apiPass = import.meta.env.VITE_API_PASSCODE;
-
-// function scriptAlreadyLoaded(src) {
-//     return document.querySelector(`script[src="${src}"]`);
-// }
-
-// function loadCheckoutScript(src) {
-//     return new Promise((resolve, reject) => {
-//         if (scriptAlreadyLoaded(src)) {
-//             resolve();
-//             return;
-//         }
-
-//         let checkoutScript = document.createElement("script");
-//         checkoutScript.src = src;
-//         checkoutScript.onload = resolve;
-//         checkoutScript.onerror = reject;
-//         document.head.appendChild(checkoutScript);
-//     });
-// }
-
-// function addWorldpayCheckoutToPage() {
-//     return new Promise((resolve, reject) => {
-//         (function () {
-//             window.Worldpay.checkout.init(
-//                 {
-//                     id: "identity",
-//                     form: "#container",
-//                     fields: {
-//                         pan: {
-//                             selector: "#card-pan",
-//                         },
-//                         expiry: {
-//                             selector: "#card-expiry",
-//                         },
-//                         cvv: {
-//                             selector: "#card-cvv",
-//                         },
-//                     },
-//                     styles: {
-//                         "input.is-valid": {
-//                             "color": "green",
-//                         },
-//                         "input.is-invalid": {
-//                             "color": "red",
-//                         },
-//                         "input.is-onfocus": {
-//                             "color": "black",
-//                         },
-//                     },
-//                     enablePanFormatting: true,
-//                 },
-//                 function (error, checkout) {
-//                     if (error) {
-//                         reject(error);
-//                     } else {
-//                         resolve(checkout);
-//                     }
-//                 },
-//             );
-//         })();
-//     });
-// }
-
-// function submitForm(){
-
-// }
-
-
 
 export function Payments() {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Checkout from '../components/Checkout.jsx';
-import PaymentForm from "../components/PaymentForm.jsx";
+import CheckoutSDK from "../components/CheckoutSDK.jsx";
 import { Payments } from '../components/Payments.jsx';
 import {Tokens} from "../components/Tokens.jsx";
 

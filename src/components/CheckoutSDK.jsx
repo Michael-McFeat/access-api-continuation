@@ -1,5 +1,5 @@
 import React, {useEffect, useLayoutEffect} from "react";
-import "./PaymentForm.css";
+import "./CheckoutSDK.css";
 
 function scriptAlreadyLoaded(src) {
     return document.querySelector(`script[src="${src}"]`);
@@ -63,7 +63,7 @@ function addWorldpayCheckoutToPage() {
     });
 }
 
-function PaymentForm() {
+function CheckoutSDK() {
     const checkoutScriptUrl = "https://try.access.worldpay.com/access-checkout/v2/checkout.js";
     let checkout;
 
@@ -130,4 +130,4 @@ function PaymentForm() {
     );
 }
 
-export default PaymentForm;
+export default CheckoutSDK;
